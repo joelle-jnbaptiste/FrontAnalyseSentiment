@@ -1,7 +1,10 @@
 import streamlit as st
 import requests
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-st.title("Analyse de Sentiments par Air Paradis")
+st.title("Analyse de Sentiments")
+st.subheader("par Air Paradis")
 
 # Store data across user interactions
 if "prediction_result" not in st.session_state:
